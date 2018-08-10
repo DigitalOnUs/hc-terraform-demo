@@ -6,7 +6,7 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 variable "private_key_path" {}
 variable "key_name" {
-  default = "parminder-awskey-us-east-1"
+  default = "beto-aws-key-us-east-1"
 }
 variable "network_address_space" {
   default = "10.1.0.0/16"
@@ -87,7 +87,7 @@ resource "aws_route_table_association" "rta-subnet2" {
 
 # SECURITY GROUPS #
 resource "aws_security_group" "elb-sg" {
-  name        = "nginx_elb_sg"
+  name        = "beto_nginx_elb_sg"
   vpc_id      = "${aws_vpc.vpc.id}"
 
   #Allow HTTP from anywhere
